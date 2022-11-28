@@ -15,14 +15,17 @@
 
 <body>
     <header>
-        <section class="row">
-            <h1>
-                <a class="logo" href="#">
-                    <img class="img-responsive col-center col-sm-5 col-md-2" src="img/logo-bedford.png" alt="Bedford Foundation"> 
-                </a>  <!-- where logo goes LINKS TO HOME -->
-            </h1>
+        <div class="wrapper">
+            <div class="row">
+                <div class="col-center col-sm-5 col-md-2">
+                    <h1>
+                        <a href="#">
+                            <img class="img-responsive" src="img/logo-bedford.png" alt="Bedford Foundation"> 
+                        </a>  <!-- where logo goes LINKS TO HOME -->
+                    </h1>
+                </div>
 
-            <div  class="wrapper">
+        
                 <nav>
                     <ul>
                         <li><a href="#">Home</a></li>
@@ -30,74 +33,80 @@
                         <li><a href="take-action.html">Take Action</a></li>
                     </ul>
                 </nav>
+            
             </div>
-        </section>
 
-        <section class="wrapper">
-            <h2><i>sustainability</i><br>Starts With You</h2>
+            <p><i>sustainability</i><br>Starts With You</p>
             <p><a href="what-we-do.html">Learn More</a></p>
-        </section>
+        </div>
     </header>
 
     <main class="wrapper">
 
-        <section>
-            <p>We conserve land through outreach, restoration, and research.</p>
+    
+        <p>We conserve land through outreach, restoration, and research.</p>
 
-            <p>Some of the Earth's greatest landscapes are threatened by increased road construction, oil and gas exploration, and mining. We aim to protect these areas from inappropriate development, but we cannot achieve our goals alone. Find out how you can help.</p>
-        </section>
+        <div class="col-center row">
+            <div class="col-md-6">
+                <p>Some of the Earth's greatest landscapes are threatened by increased road construction, oil and gas exploration, and mining. We aim to protect these areas from inappropriate development, but we cannot achieve our goals alone. Find out how you can help.</p>
+            </div>
+        </div>
+        
         <div class="row">
             
-            <div>
-                <section class="col-sm-12 col-md-6 col-center">
-                    <img class="img-responsive"src="img/hero-about.jpg" alt="small man on grassy mountains with sunset">
-                </section>
+            <section class="col-sm-12 col-md-6 col-lg-4">
+                <div id="about-img">
+        
+                </div>
 
-                <section class="col-sm-12 col-md-6 col-center">
+               
                     <header>
                         <h2>About</h2>
                     </header>
                     <p>Find out about our organization, mission, our methods, and the results of our decades of advocacy.</p>
                     <p><a href="what-we-do.html">Learn More</a></p>
-                </section>
-            </div>
+                
+            </section>
 
-            <div>
-                <section class="col-center col-sm-12 col-md-6">
-                    <img class="img-responsive"src="img/action-hero.jpg" alt="green forest with tall trees">
-                </section>
+            <section class="col-sm-12 col-md-6 col-lg-4">
+                <div id="action-img">
+                    
+                </div>
 
-                <section class="col-sm-12 col-md-6 col-center">
-                    <header>
-                        <h2>Take Action</h2>
-                    </header>
-                    <p>Ready to take the next step? You can become a contributor to our cause, or participate yourself.</p>
-                    <p><a href="take-action.html">Find out How</a></p>
-                </section>
-            </div>
+                <header>
+                    <h2>Take Action</h2>
+                </header>
+                <p>Ready to take the next step? You can become a contributor to our cause, or participate yourself.</p>
+                <p><a href="take-action.html">Find out How</a></p>
+        
+            </section>
         </div>
             
     </main>
 
     <footer>
         <div>
-            <a href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-square-facebook"></i></a>
-            <a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-square-instagram"></i></a>
-           <a href="https://twitter.com/" target="_blank"> <i class="fa-brands fa-square-twitter"></i></a>
+            <div class="wrapper">
+                <ul>
+                    <li><a href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-square-facebook"></i></a></li>
+                    <li>
+                        <a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-square-instagram"></i></a>
+                    </li>
+                    <li>
+                        <a href="https://twitter.com/" target="_blank"> <i class="fa-brands fa-square-twitter"></i></a>  
+                    </li>
+                </ul>
+            </div>
         </div>
         <address class="wrapper">
-            <ul class="row">
-                <div>
-                    <li><a href="https://www.google.com/maps/@40.800609,-96.6907283,12z" target="_blank"> 459 Broadway, New York</a> </li>
-                </div>
-                
-                <div>
-                    <li><a href="tel:+12125550123">(212) 555-0123</a></li>
-                </div>
+            <ul>
+        
+                <li><a href="https://www.google.com/maps/place/459+Broadway,+New+York,+NY+10013/data=!4m2!3m1!1s0x89c2598bd3fc4031:0x48b829f544b1ce3f?sa=X&ved=2ahUKEwj_1LCvw_D6AhXcj4kEHcAtAzIQ8gF6BAgVEAE" target="_blank"> 459 Broadway, New York</a> </li>
+            
+                <li><a href="tel:+12125550123">(212) 555-0123</a></li>
 
-                <div>
-                    <li><a href="mailto:template@gmail.com">template@gmail.com</a></li>
-                </div>
+                <li><a href="mailto:template@gmail.com">template@gmail.com</a></li>
+            
             </ul>        
         </address>
     </footer>
