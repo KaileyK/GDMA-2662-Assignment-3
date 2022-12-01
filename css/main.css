@@ -21,10 +21,14 @@
         - Blockquote
         - Achievements
         - Footer
+        - Group Selectors
+        - Address
 7.0 - Utilities: utilities and helper classes with ability to override anything which goes before in the triangle, eg. hide helper class
         - Alignment
         -Screenreader	    
 --------------------------------------------------------------*/
+
+/* Hi Elizabeth! I just want to say thank you for helping me so much, and when I say that, I don't just mean with coding. I really appreciate everything you've done for me and this class as a whole. Please keep being awesome! Thank you again! :) */
 
 /*--------------------------------------------------------------
     3.0 - GENERIC
@@ -92,6 +96,37 @@ li{
         display: inline-block;
 }
 
+/* -----BLOCKQUOTE------ */
+
+blockquote{
+        border-top: #BCBCBC 1px solid;
+        border-bottom: #BCBCBC 1px solid;
+        margin: 2em 0;
+        padding: 1em 0;
+        font-size: 1.3rem;
+        text-align: center;
+}
+
+blockquote p{
+        margin:0 0 .8em 0;
+}
+
+blockquote> p:first-of-type,
+blockquote footer{
+        font-family:'Montserrat', sans-serif;
+        color:#BCBCBC;
+        font-weight: 600;
+}
+
+blockquote> p:first-of-type{
+        font-size: 7rem;
+        margin: 0.4em 0 0;
+}
+
+blockquote footer{
+        font-size: .9rem;
+        background-color: transparent;
+}
 
 /*--------------------------------------------------------------
     5.0 - OBJECTS
@@ -286,6 +321,17 @@ li{
     6.0 - COMPONENTS
 -------------------------------------------------------------- */
 
+
+/* -----GROUP SELECTORS------ */
+
+footer i a:hover,
+a,
+footer>div
+{
+        color:#ffffff;
+}
+
+
 /* -----COL------ */
 main .row>.col-md-4:last-child{
         margin-bottom: 6em;
@@ -313,7 +359,6 @@ main> p,
 a{
         text-decoration: none;
         text-transform: uppercase;
-        color:#ffffff;
         font-family:'Montserrat', sans-serif;
         font-weight: 500;
 }
@@ -449,39 +494,6 @@ section>#bg-forest{
         margin: 2em 0 2em 0;
 }
 
-/* -----BLOCKQUOTE------ */
-
-blockquote{
-        border-top: #BCBCBC 1px solid;
-        border-bottom: #BCBCBC 1px solid;
-        margin: 2em 0;
-        padding: 1em 0;
-        font-size: 1.3rem;
-        text-align: center;
-}
-
-blockquote p{
-        margin:0 0 .8em 0;
-}
-
-blockquote> p:first-of-type,
-blockquote footer{
-        font-family:'Montserrat', sans-serif;
-        color:#BCBCBC;
-        font-weight: 600;
-}
-
-blockquote> p:first-of-type{
-        font-size: 7rem;
-        margin: 0.4em 0 0;
-}
-
-blockquote footer{
-        font-size: .9rem;
-        background-color: transparent;
-}
-
-
 /* -----ACHIEVEMENTS------ */
 
 #achievements li{
@@ -499,8 +511,7 @@ blockquote footer{
 
 
 footer>div{
-        background-color:#4E9374;
-        color:#ffffff;   
+        background-color:#4E9374;  
 }
 
 footer i{
@@ -514,9 +525,7 @@ footer{
         text-align: center;
 }
 
-footer i a:hover{
-        color:#ffffff;
-}
+/* -----ADDRESS------ */
 
 address{
         padding:1em 0;
@@ -562,8 +571,13 @@ address li{
         6.0 - COMPONENTS
         -------------------------------------------------------------- */
 
-        /* -----IMAGES------ */
+        h1,
+        header p:first-of-type,
+        header nav li:last-child a{
+                color:#ffffff
+        }
 
+        /* -----IMAGES------ */
        
 
         #bg-forest, #bg-mountains{
@@ -603,7 +617,6 @@ address li{
         header nav li:last-child a{
                 border: #ffffff 1px solid;
                 background-color: transparent;
-                color:#ffffff;
                 padding: 0.5em 1em;
                 border-radius: 2em;
         }
@@ -633,8 +646,7 @@ address li{
         h1,
         header p:first-of-type{
         font-size: 5.4rem;  
-        font-weight: 600;   
-        color:#ffffff;
+        font-weight: 600;  
         margin: 0 0 .6em 0;
         }
 
@@ -664,8 +676,6 @@ address li{
         footer ul{
                 margin: 0 auto;
         }
-
-
        
 }
 
