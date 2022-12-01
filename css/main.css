@@ -12,7 +12,15 @@
 5.0 - Objects: class-based selectors which define undecorated design patterns, building blocks
         - Framework
 6.0 - Components: specific designed components
-        - Navigation 
+        - Nav
+        - Header
+        - Images
+        - Col
+        - Main
+        - What We Do
+        - Blockquote
+        - Achievements
+        - Footer
 7.0 - Utilities: utilities and helper classes with ability to override anything which goes before in the triangle, eg. hide helper class
         - Alignment
         -Screenreader	    
@@ -37,9 +45,8 @@
 html{           /* set a font size! */
         font: 1rem/1.6em 'EB Garamond', serif;
         color:#1F1F1F;
+        text-align: center;
 }
-
-
 
 
 /*--------------------------------------------------------------
@@ -55,19 +62,9 @@ header p:first-of-type{
         text-transform: uppercase;
 }
 
-.row>h1{
-        margin:0 auto;
-}
-
 h1,
 header p:first-of-type{
-        font-size: 2.4rem;  
-        font-weight: 600;   
-        color:#ffffff;
-}
-
-.wrapper>h2:first-of-type{
-        font-size: 1.9rem;  
+        font-size: 2.3rem;  
         font-weight: 600;   
         color:#ffffff;
 }
@@ -76,7 +73,7 @@ h2{
         color:#BDBDBD;
         font-size: 1.3rem;
         font-weight: 600;
-        letter-spacing: .2em;
+        letter-spacing: .3em;
 }
 
 i{
@@ -86,22 +83,15 @@ i{
         text-transform: lowercase;
 }
 
-header,
-main{
+ul{
+        padding:0;
         text-align: center;
 }
 
-ul{
-        padding:0;
-}
-
 li{
-        display: inline;
+        display: inline-block;
 }
 
-.wrapper>section>p:first-child{
-        font-size: 1.5rem;
-}
 
 /*--------------------------------------------------------------
     5.0 - OBJECTS
@@ -125,8 +115,6 @@ li{
         max-width: 100%;
 }
 
-
-
 [class*='col-']{
         padding: 10px 5px;
 }
@@ -135,7 +123,6 @@ li{
         margin-left: -10px;
         margin-right: -10px;
 }
-
 
 .col-sm-1 {
         width: calc(100% * 1/ 12);
@@ -299,9 +286,29 @@ li{
     6.0 - COMPONENTS
 -------------------------------------------------------------- */
 
-main section{
-        margin:4em 0;
+/* -----COL------ */
+main .row>.col-md-4:last-child{
+        margin-bottom: 6em;
 }
+
+main .row>.col-md-4{
+        margin: 1em 0;
+}
+
+/* -----MAIN------ */
+
+main .row>section{
+        margin: 1em 0 4em 0;
+}
+
+.action-headline,
+main> p,
+#what-we-do{
+        font-size: 1.5rem;
+        line-height: 1.4em;
+        margin: 2em 0 0;
+}
+
 /* -----NAV------ */
 a{
         text-decoration: none;
@@ -311,16 +318,17 @@ a{
         font-weight: 500;
 }
 
-ul{
-        margin: 0 auto;
-}
-
 li{ 
         padding: .6em 1em;
 }
 
+nav li{
+        padding-bottom: 1em;
+}
+
 nav li a:hover{
         text-decoration: underline;
+        text-underline-offset: .5em;
         margin-bottom: 1em;
 }
 
@@ -336,42 +344,6 @@ nav{
         margin-bottom: 2em;
 }
 
-
-
-/* -----HERO------ */
-
-body>header{
-        background: url(../img/home-hero.jpg) center no-repeat;
-        -moz-background-size: cover;
-        -o-background-size: cover;
-        -webkit-background-size: cover;
-        -ms-background-size: cover;
-        background-size: cover;   
-        padding:1em 0 5em 0; 
-        text-align: center;
-}
-
-
-#about-img{
-        background-image: url(../img/hero-about.jpg);
-        height: 18em;
-        background-size: cover;
-        margin:0 auto;
-}
-
-#action-img{
-        background: url(../img/action-hero.jpg) no-repeat center;
-        height: 18em;
-        background-size: cover;
-        margin: 0 auto;
-}
-
-
-
-header .row{
-        justify-content: center;
-}
-
 p a{
         background-color: #4E9374;
         padding: .5em 1.3em;
@@ -383,35 +355,7 @@ p a:hover{
 }
 
 
-
-/* -----TAKE ACTION------ */
-
-.action{
-        background: url(../img/action-hero.jpg) center no-repeat;
-        -moz-background-size: cover;
-        -o-background-size: cover;
-        -webkit-background-size: cover;
-        -ms-background-size: cover;
-        background-size: cover;   
-        padding:1em 0 5em 0; 
-        text-align: center;
-}
-
-
-/* -----WHAT WE DO------ */
-
-.about{
-        background: url(../img/hero-about.jpg) center no-repeat;
-        -moz-background-size: cover;
-        -o-background-size: cover;
-        -webkit-background-size: cover;
-        -ms-background-size: cover;
-        background-size: cover;   
-        padding:1em 0 5em 0; 
-        text-align: center;
-}
-
-.col-sm-12 i{
+nav i{
         font-size: 1.2rem;
         color:#1D6D49;
         text-transform: capitalize;
@@ -445,42 +389,110 @@ main nav a:hover{
 }
 
 
-#what-we-do p{
-        font-size: 1.4rem;
-        line-height: 1.3em;
+/* -----HEADER------ */
+
+body>header{
+        background: url(../img/home-hero.jpg) center no-repeat;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        -webkit-background-size: cover;
+        -ms-background-size: cover;
+        background-size: cover;   
+        padding:0 0 5em 0; 
+        text-align: center;
 }
 
-/* -----MISSION------ */
+header .row{
+        justify-content: center;
+}
+
 
 #mission, #mission header{
         text-align: left;
 }
 
+/* -----IMAGES------ */
+
+
+section>#bg-mountains{
+        height: 16em;
+}
+
+section>#bg-forest{
+        height: 16em;
+}
+
+#bg-forest{
+        background: url(../img/action-hero.jpg) center no-repeat;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        -webkit-background-size: cover;
+        -ms-background-size: cover;
+        background-size: cover;   
+        padding:1em 0 5em 0; 
+        text-align: center;
+}
+
+#bg-mountains{
+        background: url(../img/hero-about.jpg) center no-repeat;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        -webkit-background-size: cover;
+        -ms-background-size: cover;
+        background-size: cover;   
+        padding:1em 0 5em 0; 
+}
+
+/* -----WHAT WE DO------ */
+
+#what-we-do{
+        margin: 2em 0 2em 0;
+}
+
+/* -----BLOCKQUOTE------ */
+
 blockquote{
         border-top: #BCBCBC 1px solid;
         border-bottom: #BCBCBC 1px solid;
-        margin: 0 auto;
+        margin: 2em 0;
         padding: 1em 0;
         font-size: 1.3rem;
         text-align: center;
 }
 
+blockquote p{
+        margin:0 0 .8em 0;
+}
+
+blockquote> p:first-of-type,
 blockquote footer{
+        font-family:'Montserrat', sans-serif;
         color:#BCBCBC;
         font-weight: 600;
+}
+
+blockquote> p:first-of-type{
+        font-size: 7rem;
+        margin: 0.4em 0 0;
+}
+
+blockquote footer{
         font-size: .9rem;
         background-color: transparent;
-        font-family:'Montserrat', sans-serif;
 }
 
 
 /* -----ACHIEVEMENTS------ */
 
 #achievements li{
-        display:block;
+        display:inline-block;
         text-align: left;
         background: url(../img/li-tree.png) no-repeat;
-        padding: 0.6em 2em 0; 
+        padding: 0.6em 0 0 2em
+}
+
+#achievements h2{
+        text-align: left;
 }
 
 /* -----FOOTER------ */
@@ -488,9 +500,7 @@ blockquote footer{
 
 footer>div{
         background-color:#4E9374;
-        padding:1em;
-        color:#ffffff;
-       
+        color:#ffffff;   
 }
 
 footer i{
@@ -509,10 +519,14 @@ footer i a:hover{
 }
 
 address{
-        padding:2em 0;
-        display:block;
+        padding:1em 0;
         font-style: normal;
 }
+
+address li{
+        display: block;
+}
+
 
 @media screen and (min-width: 768px){
 
@@ -525,30 +539,56 @@ address{
                 width: 75%;
         }
 
-        html{ 
-                font-size: 1.2rem;
+        html{           /* set a font size! */
+                font: .9rem/1.6em 'EB Garamond', serif;
+        }
+
+
+        /*--------------------------------------------------------------
+        4.0 - ELEMENTS
+        -------------------------------------------------------------- */
+
+        /* ----- TYPOGRAPHY ----- */
+
+
+        .action-headline,
+        main> p{
+                font-size: 1.8rem;
+                line-height: 1.3em;
+                margin: 2em 0 0;
         }
 
         /*--------------------------------------------------------------
         6.0 - COMPONENTS
         -------------------------------------------------------------- */
 
-        /* -----TAKE ACTION------ */
+        /* -----IMAGES------ */
 
-        .action, .about{
-                padding:2em  0 10em 0;
+       
+
+        #bg-forest, #bg-mountains{
+                padding: 2em 0 12em 0;
         }
 
-        .action h1, .about h1{
+        #bg-forest h1, #bg-mountains h1{
                 font-size: 5rem;
-                padding-top: 1em;
+                margin-top: 2em;
         }
+        
+        /* -----COL------ */
 
-        .action .row:first-of-type, .about .row:first-of-type{
-                flex-wrap: nowrap;
+        main .row>.col-md-4{
+                margin: 8em 0 8em 0;
         }
 
         /* -----WHAT WE DO------ */
+
+        #what-we-do{
+                text-align: left;
+                margin-bottom: 1.5em;
+        }
+
+        /* -----NAV------ */
 
         main nav{
                 text-align: left;
@@ -557,16 +597,14 @@ address{
         main nav li{
                 display: block;
                 padding: .2em; 
+                text-align: left;
         }
-
-        /* -----NAV------ */
-
 
         header nav li:last-child a{
                 border: #ffffff 1px solid;
                 background-color: transparent;
                 color:#ffffff;
-                padding: .5em 1.3em;
+                padding: 0.5em 1em;
                 border-radius: 2em;
         }
         
@@ -574,28 +612,59 @@ address{
                 text-decoration: none;
                 background-color: #ffffff;
                 color:#4E9374;
-                padding: .5em 1.3em;
-                border-radius: 2em;
         }
 
-        /* -----HERO------ */
+        body>header{
+                padding:2em 0 5em 0; 
+        }
+
+
+        /* -----HEADER------ */
+        
+        h1,
+        header p:first-of-type{
+        font-size: 2rem;  
+        }
 
         header .row{
                 justify-content: space-between;
         }
 
+        h1,
+        header p:first-of-type{
+        font-size: 5.4rem;  
+        font-weight: 600;   
+        color:#ffffff;
+        margin: 0 0 .6em 0;
+        }
+
+        header i{
+                font-size: 4rem;
+                font-weight: 100;
+                line-height: 2.5em;
+        }
 
 
         /* -----FOOTER------ */
 
         footer li{
-                display: inline;
-                font-style: normal;
+                display: inline-block;
         }
 
-        address .row{
-               justify-content: center;
+        footer a:hover{
+                text-decoration: underline 2px #4E9374;
+                text-underline-offset: .5em;
+                margin-bottom: 1em;
         }
+
+        footer>div{
+                padding:.1em;
+        }
+
+        footer ul{
+                margin: 0 auto;
+        }
+
 
        
 }
@@ -603,37 +672,27 @@ address{
 
 @media screen and (min-width: 768px){
 
-        /* -----UNIVERSAL------ */
 
+        /* -----ACHIEVEMENTS------ */
 
-
-        /* -----HERO------ */
-
-       
-
-       /* -----LAYOUT------ */
-
-      
-        /* -----SYSTEMS------ */
-        
-
-        /* -----TESTING------ */
-       
-
-        /* -----BENEFITS------ */
-
-        
-
-        /* -----FOOTER------ */
-
-       
-
+        #achievements{
+                padding-bottom: 3em;
+        }
 }
 
 
 @media screen and (min-width: 1024px){
 
-        /* -----HERO------ */
+       /*--------------------------------------------------------------
+        3.0 - GENERIC
+        -------------------------------------------------------------- */
+        /* ----- UNIVERSAL ----- */
+
+        html{           /* set a font size! */
+                font: 1.2rem/1.6em 'EB Garamond', serif;
+                color:#1F1F1F;
+                text-align: center;
+        }
 
 
 }
@@ -647,10 +706,18 @@ address{
 
 .col-center{
         justify-content: center;
+        margin: 0 auto;
 }
 
 /* -----SCREEN READER------ */
 
-.sr-only{
-        position:absolute;
+.sr-only {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0,0,0,0);
+        border: 0;
 }
